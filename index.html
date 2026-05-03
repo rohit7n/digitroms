@@ -2,41 +2,88 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 <title>Digitroms | Websites That Bring Customers</title>
 
+<link rel="icon" type="image/jpeg" href="digitroms_logo.jpg">
+
 <style>
 :root{
-  --primary:#ff4b2b;
-  --blue:#2f80ed;
   --green:#25D366;
-  --black:#0b0b0b;
-  --dark:#111;
-  --gray:#777;
-  --light:#f5f5f5;
+  --blue:#2f80ed;
+  --gray:#9ca3af;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+/* FAST SYSTEM UI */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
 
-body{background:#fff;color:#111;overflow-x:hidden;padding-bottom:90px}
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#000;
+  color:#fff;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 16px;
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.85);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  z-index:100;
+}
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.header-logo{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  object-fit:cover;
+}
 
 /* HERO */
 .hero{
-  background:linear-gradient(135deg,#0b0b0b,#d63b1f);
-  color:white;
   text-align:center;
-  padding:90px 16px;
+  padding:85px 16px;
+  background:linear-gradient(135deg,#000,#2a0000,#ff3b30);
 }
 
-.logo{
-  font-weight:bold;
-  font-size:20px;
-  margin-bottom:18px;
+.hero-logo img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid rgba(255,255,255,0.8);
 }
 
-.hero h1{font-size:34px;line-height:1.2}
-.hero p{max-width:650px;margin:10px auto;opacity:0.9}
+h1{
+  font-size:30px;
+  margin-top:16px;
+}
+
+.subtitle{
+  max-width:700px;
+  margin:10px auto;
+  color:#d1d5db;
+}
 
 /* BUTTON */
 .btn{
@@ -44,108 +91,138 @@ body{background:#fff;color:#111;overflow-x:hidden;padding-bottom:90px}
   padding:14px 18px;
   margin-top:18px;
   border-radius:10px;
-  font-weight:bold;
+  font-weight:700;
   text-decoration:none;
 }
 
-.btn-wa{background:#25D366;color:white}
+.btn-wa{
+  background:var(--green);
+  color:white;
+}
 
-/* SECTIONS */
-section{padding:60px 16px;text-align:center}
+/* SECTION */
+section{
+  padding:55px 16px;
+  text-align:center;
+}
 
-h2{margin-bottom:16px}
+h2{
+  font-size:22px;
+  margin-bottom:12px;
+}
+
+p{
+  color:var(--gray);
+}
 
 /* GRID */
 .grid{
   display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:16px;
+  flex-direction:column;
+  gap:14px;
+  align-items:center;
 }
 
 /* CARD */
 .card{
-  max-width:320px;
   width:100%;
-  background:#f5f5f5;
+  max-width:360px;
+  background:rgba(255,255,255,0.05);
   padding:16px;
   border-radius:12px;
+  border:1px solid rgba(255,255,255,0.1);
   text-align:left;
-  border-top:4px solid #ff4b2b;
 }
 
-/* COLORS */
-.blue{border-top-color:#2f80ed}
-.green{border-top-color:#25D366}
+.blue{border-left:4px solid var(--blue);}
+.green{border-left:4px solid var(--green);}
 
-/* PROCESS STEP */
-.step{
-  font-weight:bold;
+/* PRICE */
+.price{
+  font-size:18px;
+  font-weight:700;
   margin-bottom:6px;
 }
 
-/* FAQ */
-.faq{
-  cursor:pointer;
-}
-
-.faq p{
-  display:none;
-  margin-top:8px;
-  color:#777;
-}
-
-/* FLOAT WA */
-.floating-wa{
+/* FLOAT */
+.float-wa{
   position:fixed;
   bottom:18px;
   right:18px;
-  width:58px;
-  height:58px;
-  background:#25D366;
+  width:56px;
+  height:56px;
+  background:var(--green);
   border-radius:50%;
   display:flex;
-  justify-content:center;
   align-items:center;
-  font-size:22px;
+  justify-content:center;
+  font-size:20px;
 }
 
-/* FOOTER */
+/* CTA */
+.cta{
+  background:#0b0b0b;
+}
+
+/* LEGAL */
+.legal{
+  background:#050505;
+  color:#d1d5db;
+  max-width:900px;
+  margin:auto;
+  text-align:left;
+  padding:30px 16px;
+  border-radius:12px;
+}
+
 footer{
   text-align:center;
-  padding:20px;
-  font-size:13px;
-  color:#777;
-  background:#fafafa;
+  padding:18px;
+  font-size:12px;
+  color:#6b7280;
+  background:#050505;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+<header>
+  <div class="logo-area">
+    <img src="digitroms_logo.jpg" class="header-logo">
+    <b>Digitroms</b>
+  </div>
+</header>
+
 <!-- HERO -->
 <div class="hero">
-  <div class="logo">Digitroms</div>
+  <div class="hero-logo">
+    <img src="digitroms_logo.jpg">
+  </div>
 
-  <h1>We Turn Businesses Into Customer-Getting Machines</h1>
-  <p>Websites that don’t just look good—they bring real inquiries, calls, and growth.</p>
+  <h1>We Build Websites That Bring Customers</h1>
 
-  <a class="btn btn-wa" href="https://wa.me/91XXXXXXXXXX">📲 Get Started on WhatsApp</a>
+  <p class="subtitle">
+    Fast, modern, and conversion-focused websites designed to help businesses generate real inquiries and online trust.
+  </p>
+
+  <a class="btn btn-wa" href="https://wa.me/919226007329">📲 Start on WhatsApp</a>
 </div>
 
-<!-- WHY -->
+<!-- OBJECTIVE -->
 <section>
-  <h2>Why Digitroms?</h2>
-  <p>Most businesses fail online because they have no structured website. We fix that with conversion-focused systems.</p>
+  <h2>What We Do</h2>
+  <p>We create professional business websites that help you build online presence, trust, and customer leads.</p>
 </section>
 
 <!-- PROBLEM -->
 <section>
-  <h2>Your Problem (We Solve It)</h2>
+  <h2>Problems We Solve</h2>
   <div class="grid">
-    <div class="card">❌ No online visibility</div>
-    <div class="card blue">❌ No customer trust</div>
-    <div class="card green">❌ No daily inquiries</div>
+    <div class="card">❌ No online presence</div>
+    <div class="card blue">❌ No trust factor</div>
+    <div class="card green">❌ No customer leads</div>
   </div>
 </section>
 
@@ -153,20 +230,9 @@ footer{
 <section>
   <h2>How It Works</h2>
   <div class="grid">
-    <div class="card">
-      <div class="step">Step 1</div>
-      Contact on WhatsApp
-    </div>
-
-    <div class="card blue">
-      <div class="step">Step 2</div>
-      We design & build your website
-    </div>
-
-    <div class="card green">
-      <div class="step">Step 3</div>
-      Launch in 7–10 days
-    </div>
+    <div class="card">1️⃣ Contact on WhatsApp</div>
+    <div class="card blue">2️⃣ We design your website</div>
+    <div class="card green">3️⃣ Launch in 7–10 days</div>
   </div>
 </section>
 
@@ -180,91 +246,82 @@ footer{
   </div>
 </section>
 
-<!-- TESTIMONIALS (REALISTIC TRUST SYSTEM) -->
-<section style="background:#f7f7f7;">
-  <h2>What Clients Say</h2>
-  <div class="grid">
-
-    <div class="card">
-      “My business started getting WhatsApp inquiries after the website went live.”
-      <br><b>— Local Business Owner</b>
-    </div>
-
-    <div class="card blue">
-      “Clean design and very easy process.”
-      <br><b>— Gym Trainer</b>
-    </div>
-
-    <div class="card green">
-      “Helped me look professional online.”
-      <br><b>— Freelancer Client</b>
-    </div>
-
-  </div>
-</section>
-
 <!-- PRICING -->
 <section>
   <h2>Pricing</h2>
   <div class="grid">
-    <div class="card">₹999 Starter</div>
-    <div class="card blue">₹1999 Professional</div>
-    <div class="card green">₹2999 Business Landing</div>
+
+    <div class="card">
+      <div class="price">₹999 Starter</div>
+      Basic business website setup
+    </div>
+
+    <div class="card blue">
+      <div class="price">₹1999 Pro</div>
+      Custom website + domain example: www.yourbusiness.com
+    </div>
+
+    <div class="card green">
+      <div class="price">₹2999 Business</div>
+      Advanced website + SEO-ready structure + full setup
+    </div>
+
   </div>
 </section>
 
-<!-- TRUST BOOST -->
-<section style="background:#f7f7f7;">
-  <h2>Why Choose Us?</h2>
-  <div class="grid">
-    <div class="card">✔ Fast delivery (7–10 days)</div>
-    <div class="card blue">✔ WhatsApp integration</div>
-    <div class="card green">✔ Conversion-focused design</div>
-  </div>
-</section>
-
-<!-- FAQ -->
+<!-- ABOUT -->
 <section>
-  <h2>FAQ</h2>
+  <h2>About Founder</h2>
+  <p>Digitroms is built by a Software Engineer focused on building modern digital systems for businesses.</p>
+</section>
 
-  <div class="card faq" onclick="toggle(this)">
-    <b>Do I need technical knowledge?</b>
-    <p>No, we handle everything.</p>
-  </div>
-
-  <div class="card faq" onclick="toggle(this)">
-    <b>Do you provide domain setup?</b>
-    <p>Yes, we guide you fully.</p>
-  </div>
-
-  <div class="card faq" onclick="toggle(this)">
-    <b>How fast is delivery?</b>
-    <p>7–10 days depending on requirements.</p>
+<!-- CONTACT -->
+<section>
+  <h2>Contact</h2>
+  <div class="card">
+    WhatsApp: +919226007329<br>
+    Email: digitroms26@gmail.com
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section style="background:#0b0b0b;color:white;">
-  <h2>Ready to Grow Your Business?</h2>
-  <p>Let’s build your online presence today.</p>
-
-  <a class="btn btn-wa" href="https://wa.me/91XXXXXXXXXX">📲 Contact Now</a>
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to Grow?</h2>
+  <a class="btn btn-wa" href="https://wa.me/919226007329">📲 Contact Now</a>
 </section>
 
-<!-- FOOTER -->
+<!-- LEGAL -->
+<section class="legal">
+
+  <h2 style="text-align:center;">Legal Information</h2>
+
+  <p><b>Privacy Policy</b><br>
+  We collect only basic user information (name, phone, email) for communication and project delivery.
+  We do not sell or share your data with third parties.</p>
+
+  <br>
+
+  <p><b>Terms & Conditions</b><br>
+  Basic customization is included. Any additional changes, design modifications, or feature updates after final approval
+  may cost between ₹300 to ₹999 depending on complexity.</p>
+
+  <br>
+
+  <p><b>Service Disclaimer</b><br>
+  We do not guarantee sales or business results. Performance depends on marketing and external factors.</p>
+
+  <br>
+
+  <p><b>Consent</b><br>
+  By contacting us, you agree to be contacted back regarding your inquiry.</p>
+
+</section>
+
 <footer>
   Digitroms © 2026 | Digital Services Startup
 </footer>
 
-<!-- FLOAT -->
-<a class="floating-wa" href="https://wa.me/91XXXXXXXXXX">💬</a>
-
-<script>
-function toggle(el){
-  let p = el.querySelector("p");
-  p.style.display = (p.style.display === "block") ? "none" : "block";
-}
-</script>
+<a class="float-wa" href="https://wa.me/919226007329">💬</a>
 
 </body>
 </html>
